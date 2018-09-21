@@ -18,3 +18,4 @@ sudo wget http://mirrors.wuchna.com/apachemirror/hadoop/common/hadoop-2.9.1/hado
 sudo tar xzf hadoop-2.9.1.tar.gz
 sudo mv hadoop-2.9.1 hadoop
 sudo rm -rf hadoop-2.9.1.tar.gz
+echo "export HADOOP_HOME=/usr/local/hadoop" >> ~/.bashrc
