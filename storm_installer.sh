@@ -35,6 +35,9 @@ supervisor.slots.ports:
  cd ..
  sudo zookeeper-3.4.13/bin/zkServer.sh start
  zookeeper-3.4.13/bin/zkCli.sh &
+ apache-storm-1.2.2/bin/storm nimbus &
+ apache-storm-1.2.2/bin/storm supervisor &
+ apache-storm-1.2.2/bin/storm ui &
 
 
  
