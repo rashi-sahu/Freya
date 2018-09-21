@@ -34,6 +34,7 @@ supervisor.slots.ports:
 
  cd ..
  sudo zookeeper-3.4.13/bin/zkServer.sh start
- 
+ zookeeper-3.4.13/bin/zkCli.sh &
+
 
  
