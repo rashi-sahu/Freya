@@ -32,4 +32,8 @@ supervisor.slots.ports:
  - 6703" >> conf/storm.yaml
  echo "Apache-storm installation complete......"
 
+ cd ..
+ sudo zookeeper-3.4.13/bin/zkServer.sh start
+ 
+
  
