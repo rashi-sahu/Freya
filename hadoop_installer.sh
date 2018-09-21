@@ -13,3 +13,4 @@ else
 fi
 echo "Copying public key to authorized keys"
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys 
+ssh localhost
