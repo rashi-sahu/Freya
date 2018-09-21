@@ -9,5 +9,5 @@ if [ -r ~/.ssh/id_rsa.pub ]; then
     echo "Public key exists...."
     echo $content
 else
-    echo "The file '~/.ssh/id_rsa.pub' does not exist."
+    ssh-keygen -t rsa -P ""
 fi
