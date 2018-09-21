@@ -28,3 +28,12 @@ echo 'lzohead () {' >> ~/.bashrc
 echo '  hadoop fs -cat $1 | lzop -dc | head -1000 | less' >> ~/.bashrc
 echo '}' >> ~/.bashrc
 echo 'export PATH=$PATH:$HADOOP_HOME/bin' >> ~/.bashrc
+cd /usr/local/hadoop
+sudo chmod -R 777 /usr/local/hadoop/
+sudo truncate -s 0 etc/hadoop/core-site.xml
+sudo echo "<configuration> 
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+    </property>
+</configuration>" >> etc/hadoop/core-site.xml
