@@ -15,3 +15,6 @@ echo "Copying public key to authorized keys"
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys 
 cd /usr/local
 sudo wget http://mirrors.wuchna.com/apachemirror/hadoop/common/hadoop-2.9.1/hadoop-2.9.1.tar.gz
+sudo tar xzf hadoop-2.9.1.tar.gz
+sudo mv hadoop-2.9.1 hadoop
+sudo rm -rf hadoop-2.9.1.tar.gz
