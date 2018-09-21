@@ -11,3 +11,5 @@ if [ -r ~/.ssh/id_rsa.pub ]; then
 else
     ssh-keygen -t rsa -P ""
 fi
+echo "Copying public key to authorized keys"
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys 
