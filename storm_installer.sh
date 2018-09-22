@@ -1,13 +1,15 @@
 #! /bin/bash
 echo "Zookeeper-3.4.13 installation......"
-mkdir storm1
-cd storm1
+cd /usr/local
+sudo mkdir storm
+cd storm
 echo "Download Zookeeper-3.4.13......"
-wget http://mirrors.fibergrid.in/apache/zookeeper/zookeeper-3.4.13/zookeeper-3.4.13.tar.gz
-tar -xvf zookeeper-3.4.13.tar.gz
+sudo wget http://mirrors.fibergrid.in/apache/zookeeper/zookeeper-3.4.13/zookeeper-3.4.13.tar.gz
+sudo tar -xvf zookeeper-3.4.13.tar.gz
 cd zookeeper-3.4.13
-mkdir data
-echo "tickTime=2000
+sudo mkdir data
+sudo chmod -R 777 /usr/local/storm
+sudo echo "tickTime=2000
 dataDir=/path/to/zookeeper/data
 clientPort=2181
 initLimit=5
@@ -17,11 +19,12 @@ echo "Zookeeper installation complete......"
 cd ..
 echo "Apache-Storm-1.2.2 installation......"
 echo "download Apache-Storm-1.2.2......"
-wget http://mirrors.wuchna.com/apachemirror/storm/apache-storm-1.2.2/apache-storm-1.2.2.tar.gz
-tar -xvf apache-storm-1.2.2.tar.gz
+sudo wget http://mirrors.wuchna.com/apachemirror/storm/apache-storm-1.2.2/apache-storm-1.2.2.tar.gz
+sudo tar -xvf apache-storm-1.2.2.tar.gz
 cd apache-storm-1.2.2
-mkdir data
-echo "storm.zookeeper.servers:
+sudo mkdir data
+sudo chmod -R 777 /usr/local/storm
+sudo echo "storm.zookeeper.servers:
  - "localhost"
 storm.local.dir: “/path/to/storm/data(any path)”
 nimbus.host: "localhost"
@@ -34,10 +37,10 @@ supervisor.slots.ports:
 
  cd ..
  sudo zookeeper-3.4.13/bin/zkServer.sh start
- zookeeper-3.4.13/bin/zkCli.sh &
- apache-storm-1.2.2/bin/storm nimbus &
- apache-storm-1.2.2/bin/storm supervisor &
- apache-storm-1.2.2/bin/storm ui &
+ sudo zookeeper-3.4.13/bin/zkCli.sh &
+ sudo apache-storm-1.2.2/bin/storm nimbus &
+ sudo apache-storm-1.2.2/bin/storm supervisor &
+ sudo apache-storm-1.2.2/bin/storm ui &
 
 
  
