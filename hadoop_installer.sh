@@ -45,3 +45,4 @@ sudo echo "<configuration>
     </property>
 </configuration>" >> etc/hadoop/hdfs-site.xml
 sed -i '/export JAVA_HOME=${JAVA_HOME}/c\export JAVA_HOME=/usr/lib/jvm/java-8-oracle' etc/hadoop/hadoop-env.sh
+bin/hdfs namenode -format
