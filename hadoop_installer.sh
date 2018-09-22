@@ -37,3 +37,10 @@ sudo echo "<configuration>
         <value>hdfs://localhost:9000</value>
     </property>
 </configuration>" >> etc/hadoop/core-site.xml
+sudo truncate -s 0 etc/hadoop/hdfs-site.xml
+sudo echo "<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+</configuration>" >> etc/hadoop/hdfs-site.xml
