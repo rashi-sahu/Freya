@@ -38,4 +38,14 @@ Doing it on a single computer is not a good idea as the data is huge. You can pa
     Move to http://localhost:50070/ to see hadoop dashboard
 
 - Run Apache Storm 
+    ```
+    $ cd /usr/local/storm
+    $ zookeeper-3.4.13/bin/zkServer.sh start
+    ``` 
+    Move to http://localhost:8080/ to see storm dashboard
+
+- Stop Apache Storm
+    ```
+    zookeeper-3.4.13/bin/zkServer.sh stop
+    ```
  
