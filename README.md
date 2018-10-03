@@ -43,7 +43,12 @@ Doing it on a single computer is not a good idea as the data is huge. You can pa
     $ zookeeper-3.4.13/bin/zkServer.sh start
     ``` 
     Move to http://localhost:8080/ to see storm dashboard
-
+- To Stop Apache Hadoop
+    ```
+    $ cd /usr/local/hadoop
+    $ sbin/stop-all.sh
+    ``` 
+    
 - Stop Apache Storm
     ```
     zookeeper-3.4.13/bin/zkServer.sh stop
