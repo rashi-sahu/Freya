@@ -9,6 +9,20 @@ Doing it on a single computer is not a good idea as the data is huge. You can pa
 ### How to install:
 
 #### For Ubuntu Machines:
+We recommend adding a new user **hduser** and give it sudo access. This uniformity of usernames across all nodes proves out to be a clever way of doing ssh without password in hadoop master-slave ecosystem. Follow these steps:
+
+- Add a new user in hadoop group (Note: You may leave all asked fields empty)
+    ```
+    $ sudo addgroup hadoop
+    $ sudo adduser --ingroup hadoop hduser
+    ```
+
+- Add *hduser* to the list of sudoers
+    ```
+    $ usermod -aG sudo hduser
+    ```
+
+- **Logout** from current user and log into the *hduser*
 
 - Clone this repository at your desired location
     ```
