@@ -9,11 +9,11 @@ sudo tar -xvf zookeeper-3.4.13.tar.gz
 cd zookeeper-3.4.13
 sudo mkdir data
 sudo chmod -R 777 /usr/local/storm
-sudo echo "tickTime=2000
-dataDir=/path/to/zookeeper/data
-clientPort=2181
-initLimit=5
-syncLimit=2" >> conf/zoo.cfg
+sudo echo "tickTime=2000"  >> conf/zoo.cfg
+sudo echo "dataDir=/var/lib/zookeeper/data" >> conf/zoo.cfg
+sudo echo "clientPort=2181"  >> conf/zoo.cfg
+sudo echo "initLimit=5"  >> conf/zoo.cfg
+sudo echo "syncLimit=2" >> conf/zoo.cfg
 echo "Zookeeper installation complete......"
 
 cd ..
