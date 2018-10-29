@@ -7,4 +7,4 @@ with open('./nodes.txt', 'r') as f:
         print line[1]
         hostnames.append(line[1])
 for host in hostnames:
-    os.system("ssh-copy-id -i ~/.ssh/id_rsa.pub hduser&"+host)
+    os.system("ssh-copy-id -i ~/.ssh/id_rsa.pub hduser@"+host)
