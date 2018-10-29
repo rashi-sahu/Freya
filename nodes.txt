@@ -1,0 +1,3 @@
+10.0.0.5    hadoop-slave1
+10.0.0.6    hadoop-slave2
+10.0.0.4    hadoop-master
