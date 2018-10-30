@@ -14,6 +14,8 @@ sudo echo "dataDir=/usr/local/storm/zookeeper-3.4.13/data" >> conf/zoo.cfg
 sudo echo "clientPort=2181"  >> conf/zoo.cfg
 sudo echo "initLimit=5"  >> conf/zoo.cfg
 sudo echo "syncLimit=2" >> conf/zoo.cfg
+sudo echo "autopurge.purgeInterval=24" >> conf/zoo.cfg
+sudo echo "autopurge.snapRetainCount=5" >> conf/zoo.cfg
 echo "Zookeeper installation complete......"
 
 cd ..
