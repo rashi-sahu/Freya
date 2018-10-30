@@ -19,6 +19,17 @@ sudo echo "autopurge.snapRetainCount=5" >> conf/zoo.cfg
 echo "Zookeeper installation complete......"
 
 cd ..
+sudo wget https://github.com/zeromq/libzmq/releases/download/v4.2.2/zeromq-4.2.2.tar.gz
+sudo tar xvzf zeromq-4.2.2.tar.gz
+sudo apt-get update && \
+sudo apt-get install -y libtool pkg-config build-essential autoconf automake uuid-dev
+cd zeromq-4.2.2
+sudo ./configure
+sudo make install
+sudo ldconfig
+sudo ldconfig -p | grep zmq
+
+cd ..
 echo "Apache-Storm-1.2.2 installation......"
 echo "download Apache-Storm-1.2.2......"
 sudo wget http://mirrors.wuchna.com/apachemirror/storm/apache-storm-1.2.2/apache-storm-1.2.2.tar.gz
