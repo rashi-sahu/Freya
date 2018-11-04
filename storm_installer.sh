@@ -30,6 +30,18 @@ sudo ldconfig
 sudo ldconfig -p | grep zmq
 
 cd ..
+git clone https://github.com/zeromq/jzmq.git
+cd jzmq/jzmq-jni
+sudo apt-get install autoconf autogen
+./autogen.sh
+./configure
+make
+sudo make install
+cd ..
+mvn package
+mvn install -Dgpg.skip=true
+
+cd ..
 echo "Apache-Storm-1.2.2 installation......"
 echo "download Apache-Storm-1.2.2......"
 sudo wget http://mirrors.wuchna.com/apachemirror/storm/apache-storm-1.2.2/apache-storm-1.2.2.tar.gz
