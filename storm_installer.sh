@@ -1,4 +1,8 @@
 #! /bin/bash
+echo "Creating working directory /app/storm"
+sudo mkdir -p /app/storm
+sudo chown -R stormuser:storm /app/storm
+sudo chmod 750 /app/storm
 echo "Zookeeper-3.4.13 installation......"
 cd /usr/local
 sudo mkdir storm
