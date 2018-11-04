@@ -71,6 +71,25 @@ We recommend adding a new user **hduser** and give it sudo access. This uniformi
     ``` 
     
 ---
+### Real-Time Layer Setup:
+We recommend adding a new user **storm** and give it sudo access. 
+
+Follow these steps:
+
+- Add a new user storm 
+    ```
+    $ sudo groupadd -g 53001 storm
+    $ sudo mkdir -p /app/home/storm
+    $ sudo useradd -u 53001 -g 53001 -d /app/home/storm -s /bin/bash storm -c "Storm service account"
+    $ sudo chmod 700 /app/home/storm
+    ```
+
+- Add *storm* to the list of sudoers
+    ```
+    $ sudo usermod -aG sudo storm
+    ```
+
+- **Logout** from current user and log into the *storm*
 
 - Install Apache Storm
     ```
