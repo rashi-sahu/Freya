@@ -76,17 +76,15 @@ We recommend adding a new user **storm** and give it sudo access.
 
 Follow these steps:
 
-- Add a new user storm 
+- Add a new user stormuser in storm group 
     ```
-    $ sudo groupadd -g 53001 storm
-    $ sudo mkdir -p /app/home/storm
-    $ sudo useradd -u 53001 -g 53001 -d /app/home/storm -s /bin/bash storm -c "Storm service account"
-    $ sudo chmod 700 /app/home/storm
+    $ sudo addgroup storm
+    $ sudo adduser --ingroup storm stormuser
     ```
 
 - Add *storm* to the list of sudoers
     ```
-    $ sudo usermod -aG sudo storm
+    $ sudo usermod -aG sudo stormuser
     ```
 
 - **Logout** from current user and log into the *storm*
