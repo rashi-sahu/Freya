@@ -55,7 +55,7 @@ sudo mkdir data
 sudo chmod -R 777 /usr/local/storm
 sudo echo "storm.zookeeper.servers:
  - "localhost"
-storm.local.dir: “/path/to/storm/data(any path)”
+storm.local.dir: “/app/storm”
 nimbus.host: "localhost"
 supervisor.slots.ports:
  - 6700
