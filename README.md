@@ -92,7 +92,7 @@ Follow these steps:
 ### On Master Node only:
 - Install Apache Storm
     ```
-    $ ./storm_installer.sh
+    $ ./storm_installer_master.sh
     ```
     This script will run the  Zookeper server, Nimbus, UI and supervisor on master node. Move to http://localhost:8080/ to see storm dashboard. 
 
@@ -104,4 +104,3 @@ Follow these steps:
     This script will also run the supervisor on slave node.
  
     You will be able to see the worker nodes in supervisor summary menu. 
-    
