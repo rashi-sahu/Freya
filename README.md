@@ -94,12 +94,7 @@ Follow these steps:
     ```
     $ ./storm_installer.sh
     ```
-- Run Apache Storm 
-    ```
-    $ cd /usr/local/storm
-    $ zookeeper-3.4.13/bin/zkServer.sh start
-    ``` 
-    Move to http://localhost:8080/ to see storm dashboard
+    This script will run the  Zookeper server, Nimbus, UI and supervisor on master node. Move to http://localhost:8080/ to see storm dashboard. 
 
 ### On Slave Nodes only:
 - Install Apache Storm with IP address of master passed as argument(e.g. here master's IP adddress is  10.0.0.3)
@@ -108,3 +103,5 @@ Follow these steps:
     ```
     This script will also run the supervisor on slave node.
  
+    You will be able to see the worker nodes in supervisor summary menu. 
+    
