@@ -89,11 +89,17 @@ Follow these steps:
 
 - **Logout** from current user and log into the *storm*
 
+### On Master Node only:
 - Install Apache Storm
     ```
     $ ./storm_installer.sh
     ```
-
+- Open storm configuration file
+    ```
+    $ gedit /usr/local/storm/apache-storm-1.2.2/conf/storm.yaml
+    ```
+    Find the variables **storm.zookeeper.servers** and **nimbus.seeds** and assign the IP address of master node to them.
+     
 - Run Apache Storm 
     ```
     $ cd /usr/local/storm
