@@ -101,8 +101,10 @@ Follow these steps:
     ``` 
     Move to http://localhost:8080/ to see storm dashboard
 
-- Stop Apache Storm
+### On Slave Nodes only:
+- Install Apache Storm with IP address of master passed as argument(e.g. here master's IP adddress is  10.0.0.3)
     ```
-    zookeeper-3.4.13/bin/zkServer.sh stop
+    $ ./storm_installer_slaves.sh 10.0.0.3
     ```
+    This script will also run the supervisor on slave node.
  
