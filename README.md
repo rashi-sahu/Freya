@@ -104,3 +104,20 @@ Follow these steps:
     This script will also run the supervisor on slave node.
  
     You will be able to see the worker nodes in supervisor summary menu. 
+
+### Batch layer database setup:
+- Start Cassandra
+    ```
+    $ ./cassandra_install.sh
+    ```
+- Stop Cassandra
+    ```
+    $ pkill -f CassandraDaemon
+    ```
+- Verify that Cassandra is running
+    ```
+    $ pgrep -f CassandraDaemon
+    ```
+
+    
+
