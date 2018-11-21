@@ -4,6 +4,8 @@
 ### Linux ###
 *~
 
+node_modules/
+
 ### C++ ###
 # Prerequisites
 *.d
